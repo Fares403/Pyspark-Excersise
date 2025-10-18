@@ -1,0 +1,39 @@
+https://jdbc.postgresql.org/download/
+
+sudo cp /home/fares-ashraf/Pyspark/Conn-postgres/postgresql-42.7.7.jar /opt/spark/jars/
+
+docker volume create pgdata
+
+docker run --name my-postgres \
+  -e POSTGRES_PASSWORD=1234 \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_DB=mydb \
+  -v pgdata:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  -d postgres
+
+docker exec -it my-postgres bash
+
+
+psql -U postgres -d mydb
+
+CREATE DATABASE mydb;
+
+/q
+
+psql -U postgres -d mydb
+
+CREATE TABLE employees (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT
+);
+
+
+INSERT INTO employees (name, department, salary) VALUES
+('Ahmed Ali', 'Engineering', 12000),
+('Sara Mohamed', 'HR', 9000),
+('Omar Hassan', 'Finance', 11000),
+('Nour Samir', 'Marketing', 9500),
+('Fares Ashraf', 'Data', 15000);
