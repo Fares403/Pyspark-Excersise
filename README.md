@@ -19,8 +19,8 @@ To run the exercises, make sure you have the following installed:
 - **Java 8+** (required by Spark)
 - **Apache Spark 3.x**
 - **PySpark library**
-- *(Optional)* Jupyter Notebook — if you prefer working with `.ipynb` files  
-- *(Optional)* Docker or Docker Compose — if you plan to containerize your environment
+- **Jupyter Notebook**
+- **Docker or Docker Compose — if you plan to containerize your environment**
 
 ---
 
