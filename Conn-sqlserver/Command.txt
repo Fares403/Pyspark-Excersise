@@ -1,4 +1,0 @@
-docker run -e "ACCEPT_EULA=Y"   -e "MSSQL_SA_PASSWORD=StrongPass123!"   -e "MSSQL_PID=Express"   -p 1433:1433   -v sqlserver_data:/var/opt/mssql   --name sqlserver2022   -d mcr.microsoft.com/mssql/server:2022-latest
-
-
-docker exec -it sqlserver2022 /opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P 'StrongPass123!' -C
