@@ -21,5 +21,5 @@ Make sure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-[git clone https://github.com/<your-username>/<repo-name>.git](https://github.com/Fares403/Pyspark-Excersise)
+(https://github.com/Fares403/Pyspark-Excersise)
 cd Pyspark-Excersise
